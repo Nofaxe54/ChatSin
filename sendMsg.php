@@ -7,4 +7,8 @@
   echo $sth;
   $BDD->exec($sth);
   echo "execute";
+
+  header('Location: ./index.php');
+  exit;
+
  ?>
