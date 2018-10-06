@@ -3,7 +3,8 @@
   $pseudo = $_POST['pseudo'];
   $message = $_POST['message'];
 
-  $sth = $BDD->prepare("INSERT INTO 'chat'(pseudo,msg) VALUES ($pseudo,$message)");
-  echo "INSERT INTO 'chat'(pseudo,msg) VALUES ($pseudo,$message)";
-  $sth->execute();
+  $sth = "INSERT INTO chat(pseudo,msg) VALUES ($pseudo,$message)";
+  echo $sth;
+  $BDD->exec($sth);
+  echo "execute";
  ?>
